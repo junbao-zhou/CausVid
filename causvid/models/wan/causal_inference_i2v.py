@@ -70,7 +70,12 @@ class InferencePipeline(torch.nn.Module):
 
         self.crossattn_cache = crossattn_cache  # always store the clean cache
 
-    def inference(self, noise: torch.Tensor, text_prompts: List[str], initial_latent: torch.Tensor) -> torch.Tensor:
+    def inference(
+        self,
+        noise: torch.Tensor,
+        text_prompts: List[str],
+        initial_latent: torch.Tensor,
+    ) -> torch.Tensor:
         """
         Perform inference on the given noise and text prompts.
         Inputs:
